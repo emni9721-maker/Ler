@@ -1,0 +1,735 @@
+{
+  "version": "2.0.0",
+  "lastUpdated": "2026-09-09T21:09:00.248Z",
+  "users": [
+    {
+      "id": "u_zero_me",
+      "username": "kai.vance",
+      "displayName": "Kai Vance",
+      "email": "kai.vance@zero.io",
+      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+      "coverUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "bio": "Visual designer & ambient explorer. Storing moments in ZERO vault. 🌿📸",
+      "followersCount": 842,
+      "followingCount": 319,
+      "followers": [
+        "u_maya",
+        "u_elena",
+        "u_marcus",
+        "u_liam"
+      ],
+      "following": [
+        "u_maya",
+        "u_elena",
+        "u_marcus"
+      ],
+      "friends": [
+        "u_maya",
+        "u_elena"
+      ],
+      "storageUsedBytes": 2144457762.4,
+      "storageLimitBytes": 2199023255552,
+      "storagePlan": "pro_2tb",
+      "storageSettings": {
+        "backupOverWifiOnly": false,
+        "autoCompress": false,
+        "qualityPreset": "high",
+        "autoBackupEnabled": true,
+        "autoBackupInterval": "realtime",
+        "backupOriginalMedia": true
+      },
+      "isPrivate": false,
+      "blockedUsers": [],
+      "createdAt": "2025-01-15T08:30:00.000Z",
+      "vaultPin": "1234"
+    },
+    {
+      "id": "u_maya",
+      "username": "maya.chen",
+      "displayName": "Maya Chen",
+      "email": "maya@zero.io",
+      "avatarUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+      "coverUrl": "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80",
+      "bio": "Architectural photographer | Tokyo & Kyoto 🇯🇵",
+      "followersCount": 1420,
+      "followingCount": 412,
+      "followers": [
+        "u_zero_me",
+        "u_elena"
+      ],
+      "following": [
+        "u_zero_me"
+      ],
+      "friends": [
+        "u_zero_me"
+      ],
+      "storageUsedBytes": 30601641984,
+      "storageLimitBytes": 107374182400,
+      "isPrivate": false,
+      "blockedUsers": [],
+      "createdAt": "2024-11-10T12:00:00.000Z"
+    },
+    {
+      "id": "u_elena",
+      "username": "elena_rostova",
+      "displayName": "Elena Rostova",
+      "email": "elena@zero.io",
+      "avatarUrl": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80",
+      "coverUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80",
+      "bio": "Documenting alpine trails, twilight light & Nordic architecture 🏔️✨",
+      "followersCount": 3890,
+      "followingCount": 245,
+      "followers": [
+        "u_zero_me"
+      ],
+      "following": [
+        "u_zero_me"
+      ],
+      "friends": [
+        "u_zero_me"
+      ],
+      "storageUsedBytes": 41016937676.8,
+      "storageLimitBytes": 107374182400,
+      "isPrivate": false,
+      "blockedUsers": [],
+      "createdAt": "2024-09-02T10:00:00.000Z"
+    },
+    {
+      "id": "u_marcus",
+      "username": "marcus.v",
+      "displayName": "Marcus Vance",
+      "email": "marcus@zero.io",
+      "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+      "coverUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      "bio": "Cinema reel creator, sound collector, analog enthusiast.",
+      "followersCount": 920,
+      "followingCount": 512,
+      "followers": [
+        "u_zero_me"
+      ],
+      "following": [
+        "u_zero_me"
+      ],
+      "friends": [],
+      "storageUsedBytes": 19327352832,
+      "storageLimitBytes": 53687091200,
+      "isPrivate": false,
+      "blockedUsers": [],
+      "createdAt": "2025-02-01T14:10:00.000Z"
+    }
+  ],
+  "photos": [
+    {
+      "id": "photo_1",
+      "userId": "u_zero_me",
+      "url": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "type": "image",
+      "filename": "ZERO_IMG_20260908_YosemiteDawn.jpg",
+      "date": "2026-09-08T06:14:22.000Z",
+      "caption": "Reflections at dawn in Yosemite Valley. Silence before the wind picks up.",
+      "sizeBytes": 3355443.2,
+      "originalSizeBytes": 13421772.8,
+      "isFavorite": true,
+      "isDeleted": false,
+      "albumIds": [
+        "alb_camera",
+        "alb_travel",
+        "alb_favorites"
+      ],
+      "width": 3840,
+      "height": 2160,
+      "location": "Yosemite National Park, CA",
+      "tags": [
+        "landscape",
+        "nature",
+        "dawn",
+        "mountains"
+      ],
+      "isSharedToSocial": true,
+      "socialPostId": "post_1"
+    },
+    {
+      "id": "photo_2",
+      "userId": "u_zero_me",
+      "url": "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
+      "type": "image",
+      "filename": "ZERO_IMG_20260907_StudioMinimal.jpg",
+      "date": "2026-09-07T14:20:00.000Z",
+      "caption": "Clean studio workspace ergonomics setup.",
+      "sizeBytes": 1887436.8,
+      "originalSizeBytes": 7549747.2,
+      "isFavorite": false,
+      "isDeleted": false,
+      "albumIds": [
+        "alb_camera"
+      ],
+      "width": 3000,
+      "height": 2000,
+      "location": "Design Lab, SF",
+      "tags": [
+        "interior",
+        "minimal",
+        "workspace"
+      ]
+    },
+    {
+      "id": "photo_3",
+      "userId": "u_zero_me",
+      "url": "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80",
+      "type": "image",
+      "filename": "ZERO_IMG_20260905_StarsAbovePeak.jpg",
+      "date": "2026-09-05T22:45:10.000Z",
+      "caption": "Night sky exposure over the mountain range. 25s ISO 1600.",
+      "sizeBytes": 4823449.6,
+      "originalSizeBytes": 19293798.4,
+      "isFavorite": true,
+      "isDeleted": false,
+      "albumIds": [
+        "alb_camera",
+        "alb_travel",
+        "alb_favorites"
+      ],
+      "width": 4000,
+      "height": 2667,
+      "location": "Mount Rainier, WA",
+      "tags": [
+        "astronomy",
+        "stars",
+        "night",
+        "mountains"
+      ],
+      "isSharedToSocial": true,
+      "socialPostId": "post_2"
+    },
+    {
+      "id": "photo_4",
+      "userId": "u_zero_me",
+      "url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1200&q=80",
+      "type": "image",
+      "filename": "ZERO_IMG_20260904_GoldenHourShadows.jpg",
+      "date": "2026-09-04T18:12:00.000Z",
+      "caption": "Warm amber sunlight filtering through concrete architectural arches.",
+      "sizeBytes": 2516582.4,
+      "originalSizeBytes": 10066329.6,
+      "isFavorite": false,
+      "isDeleted": false,
+      "albumIds": [
+        "alb_camera",
+        "alb_portraits"
+      ],
+      "width": 3600,
+      "height": 2400,
+      "location": "Barcelona, Spain",
+      "tags": [
+        "architecture",
+        "light",
+        "golden-hour"
+      ]
+    },
+    {
+      "id": "photo_5",
+      "userId": "u_zero_me",
+      "url": "https://assets.mixkit.co/videos/preview/mixkit-waves-in-the-water-1164-large.mp4",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+      "type": "video",
+      "filename": "ZERO_VID_20260902_OceanTide4K.mp4",
+      "date": "2026-09-02T16:05:00.000Z",
+      "caption": "Pacific tidal flow captured in 60fps high bit-rate.",
+      "sizeBytes": 19398656,
+      "originalSizeBytes": 44040192,
+      "isFavorite": true,
+      "isDeleted": false,
+      "albumIds": [
+        "alb_videos",
+        "alb_favorites"
+      ],
+      "width": 1920,
+      "height": 1080,
+      "location": "Big Sur Coast, CA",
+      "tags": [
+        "ocean",
+        "video",
+        "waves",
+        "drone"
+      ],
+      "duration": "0:14"
+    },
+    {
+      "id": "photo_6",
+      "userId": "u_zero_me",
+      "url": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=1200&q=80",
+      "type": "image",
+      "filename": "ZERO_IMG_20260828_NeonRainTokyo.jpg",
+      "date": "2026-08-28T21:10:00.000Z",
+      "caption": "Rain reflections on asphalt in Shibuya.",
+      "sizeBytes": 3040870.4,
+      "originalSizeBytes": 11744051.2,
+      "isFavorite": false,
+      "isDeleted": false,
+      "albumIds": [
+        "alb_camera",
+        "alb_travel"
+      ],
+      "width": 3200,
+      "height": 2133,
+      "location": "Shibuya, Tokyo",
+      "tags": [
+        "street",
+        "neon",
+        "rain",
+        "tokyo"
+      ]
+    },
+    {
+      "id": "photo_7",
+      "userId": "u_zero_me",
+      "url": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80",
+      "type": "image",
+      "filename": "ZERO_IMG_20260820_MistValley.jpg",
+      "date": "2026-08-20T07:30:00.000Z",
+      "caption": "Subalpine pine tree canopy enveloped in fog.",
+      "sizeBytes": 3250585.6,
+      "originalSizeBytes": 11010048,
+      "isFavorite": false,
+      "isDeleted": true,
+      "deletedAt": "2026-09-08T10:15:00.000Z",
+      "albumIds": [
+        "alb_camera"
+      ],
+      "width": 3500,
+      "height": 2333,
+      "location": "Olympic Peninsula, WA",
+      "tags": [
+        "fog",
+        "nature",
+        "trees"
+      ]
+    }
+  ],
+  "albums": [
+    {
+      "id": "alb_camera",
+      "userId": "u_zero_me",
+      "name": "Camera Backup",
+      "coverUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+      "isPrivate": false,
+      "isVaultLocked": false,
+      "description": "Automatic sync from mobile camera roll",
+      "createdAt": "2025-01-15T09:00:00.000Z",
+      "photoCount": 5,
+      "autoCategory": "camera"
+    },
+    {
+      "id": "alb_favorites",
+      "userId": "u_zero_me",
+      "name": "Starred & Favorites",
+      "coverUrl": "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=600&q=80",
+      "isPrivate": false,
+      "isVaultLocked": false,
+      "description": "Highlighted personal selections",
+      "createdAt": "2025-01-15T09:00:00.000Z",
+      "photoCount": 3,
+      "autoCategory": "favorites"
+    },
+    {
+      "id": "alb_travel",
+      "userId": "u_zero_me",
+      "name": "Wanderlust 2026",
+      "coverUrl": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=600&q=80",
+      "isPrivate": false,
+      "isVaultLocked": false,
+      "description": "Expeditions, backcountry trails and city walks",
+      "createdAt": "2026-06-01T12:00:00.000Z",
+      "photoCount": 3,
+      "autoCategory": "travel"
+    },
+    {
+      "id": "alb_videos",
+      "userId": "u_zero_me",
+      "name": "Motion & Clips",
+      "coverUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80",
+      "isPrivate": false,
+      "isVaultLocked": false,
+      "description": "High frame-rate video captures",
+      "createdAt": "2026-07-10T15:30:00.000Z",
+      "photoCount": 1,
+      "autoCategory": "videos"
+    },
+    {
+      "id": "alb_private_vault",
+      "userId": "u_zero_me",
+      "name": "Private Zero Vault 🔒",
+      "coverUrl": "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80",
+      "isPrivate": true,
+      "isVaultLocked": true,
+      "pinCode": "1234",
+      "description": "Encrypted offline & biometric lock partition",
+      "createdAt": "2026-08-01T10:00:00.000Z",
+      "photoCount": 2
+    }
+  ],
+  "posts": [
+    {
+      "id": "post_1",
+      "userId": "u_zero_me",
+      "user": {
+        "id": "u_zero_me",
+        "username": "kai.vance",
+        "displayName": "Kai Vance",
+        "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80"
+      },
+      "content": "Quiet morning at the valley floor. Storing full RAW frames into ZERO cloud vault while sharing the compressed preview here. The dynamic range at sunrise was unreal.",
+      "media": [
+        {
+          "url": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+          "type": "image",
+          "photoId": "photo_1"
+        }
+      ],
+      "privacy": "public",
+      "createdAt": "2026-09-08T07:30:00.000Z",
+      "likes": [
+        "u_maya",
+        "u_elena",
+        "u_marcus"
+      ],
+      "comments": [
+        {
+          "id": "c_1",
+          "userId": "u_maya",
+          "user": {
+            "id": "u_maya",
+            "username": "maya.chen",
+            "displayName": "Maya Chen",
+            "avatarUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80"
+          },
+          "text": "The gradient of the sky against the granite wall is breathtaking Kai! What glass did you shoot this with?",
+          "createdAt": "2026-09-08T08:00:00.000Z",
+          "likes": [
+            "u_zero_me"
+          ]
+        },
+        {
+          "id": "c_2",
+          "userId": "u_elena",
+          "user": {
+            "id": "u_elena",
+            "username": "elena_rostova",
+            "displayName": "Elena Rostova",
+            "avatarUrl": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80"
+          },
+          "text": "Instantly saved to inspiration board. Absolutely love the mood.",
+          "createdAt": "2026-09-08T08:45:00.000Z",
+          "likes": []
+        }
+      ],
+      "sharesCount": 14,
+      "savedBy": [
+        "u_elena"
+      ]
+    },
+    {
+      "id": "post_maya",
+      "userId": "u_maya",
+      "user": {
+        "id": "u_maya",
+        "username": "maya.chen",
+        "displayName": "Maya Chen",
+        "avatarUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+        "isVerified": true
+      },
+      "content": "Exploring concrete brutalism and cantilevered structures in downtown Tokyo. Light and shade interacting in geometric harmony.",
+      "media": [
+        {
+          "url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+          "type": "image"
+        }
+      ],
+      "privacy": "public",
+      "createdAt": "2026-09-07T18:15:00.000Z",
+      "likes": [
+        "u_zero_me",
+        "u_marcus"
+      ],
+      "comments": [
+        {
+          "id": "c_3",
+          "userId": "u_zero_me",
+          "user": {
+            "id": "u_zero_me",
+            "username": "kai.vance",
+            "displayName": "Kai Vance",
+            "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80"
+          },
+          "text": "That focal point is immaculate Maya!",
+          "createdAt": "2026-09-07T19:00:00.000Z",
+          "likes": [
+            "u_maya"
+          ]
+        }
+      ],
+      "sharesCount": 8,
+      "savedBy": [
+        "u_zero_me"
+      ]
+    },
+    {
+      "id": "post_elena",
+      "userId": "u_elena",
+      "user": {
+        "id": "u_elena",
+        "username": "elena_rostova",
+        "displayName": "Elena Rostova",
+        "avatarUrl": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80"
+      },
+      "content": "Hiking through the Swedish Lapland. 3 days without cellular connection, just ZERO offline vault capturing each glacier crossing. Syncing up now from the lodge.",
+      "media": [
+        {
+          "url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+          "type": "image"
+        }
+      ],
+      "privacy": "friends",
+      "createdAt": "2026-09-06T14:40:00.000Z",
+      "likes": [
+        "u_zero_me",
+        "u_maya"
+      ],
+      "comments": [],
+      "sharesCount": 3,
+      "savedBy": []
+    }
+  ],
+  "stories": [
+    {
+      "id": "story_me",
+      "userId": "u_zero_me",
+      "user": {
+        "id": "u_zero_me",
+        "username": "kai.vance",
+        "displayName": "Kai Vance",
+        "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80"
+      },
+      "mediaUrl": "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80",
+      "mediaType": "image",
+      "caption": "Setting up the tripod for a 4-hour star trail run 🌌",
+      "createdAt": 1788977330684,
+      "expiresAt": 1789063730684,
+      "viewers": [
+        "u_maya",
+        "u_elena"
+      ],
+      "likes": [
+        "u_maya"
+      ]
+    },
+    {
+      "id": "story_maya",
+      "userId": "u_maya",
+      "user": {
+        "id": "u_maya",
+        "username": "maya.chen",
+        "displayName": "Maya Chen",
+        "avatarUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80"
+      },
+      "mediaUrl": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=800&q=80",
+      "mediaType": "image",
+      "caption": "Morning espresso in Ginza ☕",
+      "createdAt": 1788966530684,
+      "expiresAt": 1789052930684,
+      "viewers": [
+        "u_zero_me"
+      ],
+      "likes": [
+        "u_zero_me"
+      ]
+    },
+    {
+      "id": "story_elena",
+      "userId": "u_elena",
+      "user": {
+        "id": "u_elena",
+        "username": "elena_rostova",
+        "displayName": "Elena Rostova",
+        "avatarUrl": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80"
+      },
+      "mediaUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+      "mediaType": "image",
+      "caption": "First snowfall on the ridge ❄️🏔️",
+      "createdAt": 1788952130684,
+      "expiresAt": 1789038530684,
+      "viewers": [
+        "u_zero_me"
+      ],
+      "likes": []
+    }
+  ],
+  "messages": [
+    {
+      "id": "m_1",
+      "senderId": "u_maya",
+      "receiverId": "u_zero_me",
+      "text": "Hey Kai! Did you check out the new lossless compression on ZERO? Saved me 12 GB on my Tokyo RAW archive.",
+      "createdAt": "2026-09-08T09:12:00.000Z",
+      "isRead": true
+    },
+    {
+      "id": "m_2",
+      "senderId": "u_zero_me",
+      "receiverId": "u_maya",
+      "text": "Yes! The background worker compressed all my Yosemite shots without visible chroma subsampling artifacting. Super impressed.",
+      "createdAt": "2026-09-08T09:15:00.000Z",
+      "isRead": true
+    },
+    {
+      "id": "m_3",
+      "senderId": "u_maya",
+      "receiverId": "u_zero_me",
+      "text": "Awesome. Are we still planning the shared album for the upcoming Pacific Coast road trip?",
+      "createdAt": "2026-09-08T09:18:00.000Z",
+      "isRead": false
+    },
+    {
+      "id": "m_4",
+      "senderId": "u_elena",
+      "receiverId": "u_zero_me",
+      "text": "Loved your star night exposure post! Sending you the coordinates to that alpine hut.",
+      "createdAt": "2026-09-07T16:45:00.000Z",
+      "isRead": true
+    },
+    {
+      "id": "m_1788988140247",
+      "senderId": "u_zero_me",
+      "receiverId": "u_maya",
+      "text": "Sending 4K master video",
+      "mediaUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+      "mediaType": "video",
+      "fileName": "Alpine_4K_60FPS.mp4",
+      "fileSizeBytes": 1932735283,
+      "isOriginalQuality": true,
+      "createdAt": "2026-09-09T21:09:00.248Z",
+      "isRead": false
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif_snap_1788988130947",
+      "userId": "u_zero_me",
+      "type": "backup_completed",
+      "actor": {
+        "id": "u_system",
+        "username": "zero.cloud",
+        "displayName": "ZERO Cloud Vault",
+        "avatarUrl": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80"
+      },
+      "message": "Automatic scheduled vault backup completed (0.0 MB). All photos, 4K videos, documents & messages preserved.",
+      "createdAt": "2026-09-09T21:08:50.946Z",
+      "read": false
+    },
+    {
+      "id": "notif_1",
+      "userId": "u_zero_me",
+      "type": "like",
+      "actor": {
+        "id": "u_maya",
+        "username": "maya.chen",
+        "displayName": "Maya Chen",
+        "avatarUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80"
+      },
+      "targetId": "post_1",
+      "message": "liked your post \"Reflections at dawn in Yosemite Valley\"",
+      "createdAt": "2026-09-08T08:02:00.000Z",
+      "read": false
+    },
+    {
+      "id": "notif_2",
+      "userId": "u_zero_me",
+      "type": "comment",
+      "actor": {
+        "id": "u_elena",
+        "username": "elena_rostova",
+        "displayName": "Elena Rostova",
+        "avatarUrl": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80"
+      },
+      "targetId": "post_1",
+      "message": "commented: \"Instantly saved to inspiration board...\"",
+      "createdAt": "2026-09-08T08:45:00.000Z",
+      "read": false
+    },
+    {
+      "id": "notif_3",
+      "userId": "u_zero_me",
+      "type": "backup_completed",
+      "actor": {
+        "id": "u_system",
+        "username": "zero.cloud",
+        "displayName": "ZERO Cloud Vault",
+        "avatarUrl": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80"
+      },
+      "message": "Daily encrypted backup complete. 5 new photos synced securely.",
+      "createdAt": "2026-09-08T06:00:00.000Z",
+      "read": true
+    },
+    {
+      "id": "notif_4",
+      "userId": "u_zero_me",
+      "type": "follow",
+      "actor": {
+        "id": "u_marcus",
+        "username": "marcus.v",
+        "displayName": "Marcus Vance",
+        "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+      },
+      "message": "started following you",
+      "createdAt": "2026-09-07T11:20:00.000Z",
+      "read": true
+    }
+  ],
+  "privacySettings": {
+    "profileVisibility": "public",
+    "postDefaultPrivacy": "public",
+    "cloudBackupEnabled": true,
+    "autoBackupEnabled": true,
+    "autoBackupInterval": "realtime",
+    "autoBackupWifiOnly": false,
+    "backupOriginalMedia": true,
+    "lastAutoBackupAt": "2026-09-09T21:08:50.946Z",
+    "totalAutoBackupsCount": 13,
+    "autoCompressUploads": false,
+    "compressionQuality": "high",
+    "requirePinForPrivateVault": true,
+    "vaultPin": "1234",
+    "allowTagging": true,
+    "twoFactorAuth": false,
+    "storagePlan": "pro_2tb"
+  },
+  "backupSnapshots": [
+    {
+      "id": "snap_1788988130946",
+      "timestamp": "2026-09-09T21:08:50.946Z",
+      "sizeBytes": 14985,
+      "itemsCount": 19,
+      "type": "auto",
+      "status": "verified",
+      "filename": "ZERO_Vault_Snapshot_2026-09-09T21-08-50-946Z.json"
+    },
+    {
+      "id": "snap_init_1",
+      "timestamp": "2026-09-08T06:00:00.000Z",
+      "sizeBytes": 50960793.6,
+      "itemsCount": 42,
+      "type": "auto",
+      "status": "verified",
+      "filename": "ZERO_Snapshot_2026-09-08.json"
+    },
+    {
+      "id": "snap_init_2",
+      "timestamp": "2026-09-09T08:00:00.000Z",
+      "sizeBytes": 54630809.6,
+      "itemsCount": 46,
+      "type": "auto",
+      "status": "verified",
+      "filename": "ZERO_Snapshot_2026-09-09_0800.json"
+    }
+  ]
+}

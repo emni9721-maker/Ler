@@ -1,0 +1,6 @@
+{
+  "name": "ZERO",
+  "description": "ZERO is a modern Android-inspired social networking and private photo/video cloud vault platform.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

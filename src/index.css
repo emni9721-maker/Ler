@@ -1,0 +1,203 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   GLOBAL THEME CSS VARIABLES: MIDNIGHT vs AMOLED
+   ========================================================================== */
+:root,
+[data-theme="midnight"] {
+  --bg-app: #0c0e12;
+  --bg-viewport: #0f1218;
+  --bg-surface: #131720;
+  --bg-surface-elevated: #1a202c;
+  --bg-card: #12161f;
+  --bg-card-hover: #181d28;
+  --bg-input: #141822;
+  --bg-header: rgba(12, 14, 18, 0.95);
+  --bg-nav: rgba(12, 14, 18, 0.98);
+  --bg-modal: #131720;
+  --bg-popover: #161b24;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --border-card: #202632;
+  --border-active: #10b981;
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --text-tertiary: #6b7280;
+  --text-muted: #4b5563;
+  --accent-primary: #10b981;
+  --accent-hover: #34d399;
+  --accent-glow: rgba(16, 185, 129, 0.15);
+  --badge-bg: rgba(16, 185, 129, 0.12);
+  --badge-border: rgba(16, 185, 129, 0.3);
+  --badge-text: #34d399;
+  --phone-frame-bg: #0c0e12;
+  --phone-bezel: #262626;
+  --oled-black-level: 0.05;
+  --theme-mode: "midnight";
+}
+
+[data-theme="amoled"] {
+  --bg-app: #000000;
+  --bg-viewport: #000000;
+  --bg-surface: #000000;
+  --bg-surface-elevated: #080808;
+  --bg-card: #000000;
+  --bg-card-hover: #0d0d0e;
+  --bg-input: #000000;
+  --bg-header: rgba(0, 0, 0, 0.98);
+  --bg-nav: rgba(0, 0, 0, 0.98);
+  --bg-modal: #000000;
+  --bg-popover: #050505;
+  --border-subtle: #27272a;
+  --border-strong: #3f3f46;
+  --border-card: #27272a;
+  --border-active: #00ff88;
+  --text-primary: #ffffff;
+  --text-secondary: #d4d4d8;
+  --text-tertiary: #a1a1aa;
+  --text-muted: #71717a;
+  --accent-primary: #00ff88;
+  --accent-hover: #34d399;
+  --accent-glow: rgba(0, 255, 136, 0.35);
+  --badge-bg: rgba(0, 255, 136, 0.16);
+  --badge-border: rgba(0, 255, 136, 0.5);
+  --badge-text: #00ff88;
+  --phone-frame-bg: #000000;
+  --phone-bezel: #1c1c1e;
+  --oled-black-level: 0;
+  --theme-mode: "amoled";
+}
+
+/* ==========================================================================
+   SMOOTH THEME TRANSITION ANIMATION
+   Transitions background, borders, and colors gracefully
+   ========================================================================== */
+html,
+body,
+#root,
+#zero-root-app,
+#android-phone-container,
+#full-window-container,
+#zero-top-appbar,
+#zero-bottom-nav,
+nav,
+header,
+main,
+section,
+footer,
+article,
+dialog {
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 300ms cubic-bezier(0.4, 0, 0.2, 1),
+              color 200ms cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Prevent transitions from lagging transform and media */
+img, video, canvas, svg, [style*="transform"], [style*="width"], [style*="height"] {
+  transition-property: filter, opacity;
+}
+
+/* ==========================================================================
+   AMOLED HIGH-CONTRAST PURE BLACK APPLIED TO ALL UI CONTAINERS
+   ========================================================================== */
+[data-theme="amoled"] #zero-root-app {
+  background-color: #000000 !important;
+}
+
+[data-theme="amoled"] #android-phone-container {
+  background-color: #000000 !important;
+  border-color: #27272a !important;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.95), 0 0 0 1px #27272a !important;
+}
+
+[data-theme="amoled"] #full-window-container {
+  background-color: #000000 !important;
+  border-color: #27272a !important;
+}
+
+[data-theme="amoled"] #zero-top-appbar {
+  background-color: rgba(0, 0, 0, 0.98) !important;
+  border-bottom-color: #27272a !important;
+}
+
+[data-theme="amoled"] #zero-bottom-nav {
+  background-color: rgba(0, 0, 0, 0.98) !important;
+  border-top-color: #27272a !important;
+}
+
+/* Convert all dark navy surfaces to pure pitch black (#000000) */
+[data-theme="amoled"] .bg-\[\#0c0e12\],
+[data-theme="amoled"] .bg-\[\#0f1218\],
+[data-theme="amoled"] .bg-\[\#0c0e12\]\/95,
+[data-theme="amoled"] .bg-\[\#0c0e12\]\/80,
+[data-theme="amoled"] .bg-\[\#0c0e12\]\/60,
+[data-theme="amoled"] .bg-\[\#0c0e12\]\/90 {
+  background-color: #000000 !important;
+}
+
+/* Convert secondary charcoal/navy containers to pitch black or ultra-dark */
+[data-theme="amoled"] .bg-neutral-900,
+[data-theme="amoled"] .bg-neutral-900\/90,
+[data-theme="amoled"] .bg-neutral-900\/80,
+[data-theme="amoled"] .bg-neutral-900\/70,
+[data-theme="amoled"] .bg-neutral-900\/60,
+[data-theme="amoled"] .bg-neutral-900\/50,
+[data-theme="amoled"] .bg-neutral-900\/40,
+[data-theme="amoled"] .bg-neutral-900\/30,
+[data-theme="amoled"] .bg-neutral-950 {
+  background-color: #000000 !important;
+}
+
+/* Ultra-crisp high-contrast borders for AMOLED */
+[data-theme="amoled"] .border-neutral-800,
+[data-theme="amoled"] .border-neutral-800\/80,
+[data-theme="amoled"] .border-neutral-800\/60,
+[data-theme="amoled"] .border-neutral-800\/50,
+[data-theme="amoled"] .border-neutral-800\/40 {
+  border-color: #27272a !important;
+}
+
+[data-theme="amoled"] .border-neutral-700,
+[data-theme="amoled"] .border-neutral-700\/60,
+[data-theme="amoled"] .border-neutral-700\/50 {
+  border-color: #3f3f46 !important;
+}
+
+[data-theme="amoled"] .divide-neutral-800 > * + *,
+[data-theme="amoled"] .divide-neutral-800\/60 > * + * {
+  border-color: #27272a !important;
+}
+
+/* AMOLED High-Contrast Text Enhancement */
+[data-theme="amoled"] .text-neutral-400 {
+  color: #a1a1aa !important;
+}
+
+[data-theme="amoled"] .text-neutral-300 {
+  color: #f4f4f5 !important;
+}
+
+[data-theme="amoled"] .text-white {
+  color: #ffffff !important;
+}
+
+/* AMOLED Neon Accent High-Contrast Pop */
+[data-theme="amoled"] .text-emerald-400 {
+  color: #00ff88 !important;
+}
+
+[data-theme="amoled"] .bg-emerald-500 {
+  background-color: #00e676 !important;
+}
+
+[data-theme="amoled"] .border-emerald-500\/30,
+[data-theme="amoled"] .border-emerald-500\/40 {
+  border-color: rgba(0, 255, 136, 0.45) !important;
+}
+
+[data-theme="amoled"] .bg-emerald-500\/10,
+[data-theme="amoled"] .bg-emerald-500\/20 {
+  background-color: rgba(0, 255, 136, 0.15) !important;
+}
+
