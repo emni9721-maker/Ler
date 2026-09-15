@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ZERO</string>
+    <string name="app_tagline">Encrypted Cloud Vault &amp; Social Feed</string>
+    <string name="unlock_vault">Unlock ZERO Vault</string>
+    <string name="biometric_prompt_subtitle">Authenticate with fingerprint or facial recognition</string>
+    <string name="enter_pin">Enter 4-Digit Security PIN</string>
+</resources>

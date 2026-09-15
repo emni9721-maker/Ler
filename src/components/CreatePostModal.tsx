@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import {
   X,
   Send,
@@ -9,6 +9,8 @@ import {
   Sparkles,
   Camera,
   Play,
+  HardDrive,
+  Upload,
 } from 'lucide-react';
 import { User, PhotoItem, PostPrivacy } from '../types';
 
@@ -19,6 +21,7 @@ interface CreatePostModalProps {
   onClose: () => void;
   onSubmitPost: (data: { content: string; media?: { url: string; type: 'image' | 'video'; photoId?: string }[]; privacy: PostPrivacy }) => void;
   onSubmitStory: (data: { mediaUrl: string; mediaType: 'image' | 'video'; caption?: string }) => void;
+  onOpenVaultUpload?: () => void;
 }
 
 export const CreatePostModal: React.FC<CreatePostModalProps> = ({
@@ -28,12 +31,39 @@ export const CreatePostModal: React.FC<CreatePostModalProps> = ({
   onClose,
   onSubmitPost,
   onSubmitStory,
+  onOpenVaultUpload,
 }) => {
   const [isStoryMode, setIsStoryMode] = useState(defaultIsStory);
   const [content, setContent] = useState('');
   const [privacy, setPrivacy] = useState<PostPrivacy>('public');
   const [selectedVaultPhoto, setSelectedVaultPhoto] = useState<PhotoItem | null>(null);
   const [showVaultPicker, setShowVaultPicker] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleDeviceFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const isVid = file.type.startsWith('video/');
+    const reader = new FileReader();
+    reader.onload = () => {
+      const result = reader.result as string;
+      setSelectedVaultPhoto({
+        id: `local_${Date.now()}`,
+        userId: currentUser.id,
+        url: result,
+        type: isVid ? 'video' : 'image',
+        filename: file.name,
+        sizeBytes: file.size,
+        originalSizeBytes: file.size,
+        date: new Date().toISOString(),
+        isFavorite: false,
+        isDeleted: false,
+      });
+      setShowVaultPicker(false);
+    };
+    reader.readAsDataURL(file);
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -151,14 +181,30 @@ export const CreatePostModal: React.FC<CreatePostModalProps> = ({
             className="w-full bg-neutral-950/60 border border-neutral-800/80 rounded-2xl p-3 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-emerald-500/70 resize-none"
           />
 
-          {/* Attached Media from Vault */}
+          {/* Attached Media from Vault or Device */}
+          <input
+            type="file"
+            ref={fileInputRef}
+            onChange={handleDeviceFileSelect}
+            accept="image/*,video/*"
+            className="hidden"
+          />
+
           {selectedVaultPhoto ? (
             <div className="relative aspect-video w-full rounded-2xl overflow-hidden bg-black border border-neutral-800">
-              <img
-                src={selectedVaultPhoto.url}
-                alt="Selected"
-                className="w-full h-full object-cover"
-              />
+              {selectedVaultPhoto.type === 'video' ? (
+                <video
+                  src={selectedVaultPhoto.url}
+                  controls
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <img
+                  src={selectedVaultPhoto.url}
+                  alt="Selected"
+                  className="w-full h-full object-cover"
+                />
+              )}
               <button
                 type="button"
                 onClick={() => setSelectedVaultPhoto(null)}
@@ -168,19 +214,40 @@ export const CreatePostModal: React.FC<CreatePostModalProps> = ({
               </button>
             </div>
           ) : (
-            <div>
-              <button
-                type="button"
-                onClick={() => setShowVaultPicker(true)}
-                className="w-full py-2.5 px-3 rounded-2xl border border-dashed border-neutral-700 hover:border-emerald-500 text-neutral-400 hover:text-white flex items-center justify-center gap-2 text-xs transition-colors cursor-pointer bg-neutral-950/40"
-              >
-                <ImageIcon className="w-4 h-4 text-emerald-400" />
-                <span>
-                  {isStoryMode
-                    ? 'Attach Photo/Video for Story (Required)'
-                    : 'Attach Photo/Video from ZERO Vault'}
-                </span>
-              </button>
+            <div className="space-y-2">
+              <div className="grid grid-cols-2 gap-2">
+                <button
+                  type="button"
+                  onClick={() => setShowVaultPicker(true)}
+                  className="py-2.5 px-3 rounded-2xl border border-neutral-800 hover:border-emerald-500/70 text-neutral-300 hover:text-white flex items-center justify-center gap-1.5 text-xs transition-colors cursor-pointer bg-neutral-950/60"
+                >
+                  <ImageIcon className="w-4 h-4 text-emerald-400" />
+                  <span className="truncate">From ZERO Vault</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => fileInputRef.current?.click()}
+                  className="py-2.5 px-3 rounded-2xl border border-neutral-800 hover:border-emerald-500/70 text-neutral-300 hover:text-white flex items-center justify-center gap-1.5 text-xs transition-colors cursor-pointer bg-neutral-950/60"
+                >
+                  <Camera className="w-4 h-4 text-cyan-400" />
+                  <span className="truncate">From Device/Camera</span>
+                </button>
+              </div>
+
+              {onOpenVaultUpload && !isStoryMode && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    onClose();
+                    onOpenVaultUpload();
+                  }}
+                  className="w-full py-2 px-3 rounded-xl border border-neutral-800/80 hover:border-neutral-700 text-[11px] text-neutral-400 hover:text-neutral-200 flex items-center justify-center gap-1.5 transition-colors cursor-pointer bg-neutral-950/30"
+                >
+                  <Upload className="w-3.5 h-3.5 text-emerald-400" />
+                  <span>Upload & Compress Media directly to Vault</span>
+                </button>
+              )}
             </div>
           )}
 

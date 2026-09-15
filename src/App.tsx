@@ -17,6 +17,7 @@ import { UserProfileView } from './components/UserProfileView';
 import { NotificationsView } from './components/NotificationsView';
 import { SettingsView } from './components/SettingsView';
 import { ApkExportModal } from './components/ApkExportModal';
+import { ReelsView } from './components/ReelsView';
 
 import {
   User,
@@ -83,7 +84,7 @@ export default function App() {
 
   // Main Navigation Tabs
   const [activeTab, setActiveTab] = useState<
-    'home' | 'photos' | 'albums' | 'notifications' | 'profile' | 'settings'
+    'home' | 'photos' | 'albums' | 'reels' | 'notifications' | 'profile' | 'settings'
   >('home');
 
   // Core Data State
@@ -405,6 +406,9 @@ export default function App() {
         return { ...p, isFavorite: nextFav };
       })
     );
+    setSelectedPhotoForViewer((prev) =>
+      prev && prev.id === photoId ? { ...prev, isFavorite: !prev.isFavorite } : prev
+    );
     api.toggleFavorite(photoId).catch(() => {});
   };
 
@@ -703,11 +707,13 @@ export default function App() {
               theme={theme}
               onToggleTheme={handleToggleTheme}
               unreadMessagesCount={unreadMessagesCount}
+              unreadNotificationsCount={unreadNotifsCount}
               onOpenSearch={() => setShowSearchModal(true)}
               onOpenMessenger={() => {
                 setMessengerTargetUserId(undefined);
                 setShowMessengerModal(true);
               }}
+              onOpenNotifications={() => setActiveTab('notifications')}
               onOpenSettings={() => setActiveTab('settings')}
               onOpenProfile={() => {
                 setInspectedUserId(null);
@@ -773,6 +779,26 @@ export default function App() {
                       privacy: 'public',
                     });
                   }}
+                />
+              )}
+
+              {activeTab === 'reels' && (
+                <ReelsView
+                  currentUser={currentUser}
+                  onOpenUserProfile={(userId) => {
+                    setInspectedUserId(userId === currentUser.id ? null : userId);
+                    setActiveTab('profile');
+                  }}
+                  onToggleFollow={handleToggleFollow}
+                  onShareReel={(reel) => {
+                    handleCreatePost({
+                      content: `Shared a 4K Reel from ZERO Vault: "${reel.caption}"`,
+                      media: [{ url: reel.videoUrl, type: 'video' }],
+                      privacy: 'public',
+                    });
+                    showToast('Reel shared to your ZERO feed! 🎬');
+                  }}
+                  onToast={showToast}
                 />
               )}
 
@@ -901,7 +927,11 @@ export default function App() {
             {selectedPhotoForViewer && (
               <PhotoDetailViewer
                 photo={selectedPhotoForViewer}
-                allPhotos={photos.filter((p) => !p.isDeleted)}
+                allPhotos={
+                  selectedPhotoForViewer.isDeleted
+                    ? photos.filter((p) => p.isDeleted)
+                    : photos.filter((p) => !p.isDeleted)
+                }
                 albums={albums}
                 onClose={() => setSelectedPhotoForViewer(null)}
                 onToggleFavorite={handleToggleFavoritePhoto}
@@ -938,6 +968,7 @@ export default function App() {
                 onClose={() => setShowCreatePostModal(false)}
                 onSubmitPost={handleCreatePost}
                 onSubmitStory={handleCreateStory}
+                onOpenVaultUpload={() => setShowUploadModal(true)}
               />
             )}
 

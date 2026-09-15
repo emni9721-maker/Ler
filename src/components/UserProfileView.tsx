@@ -47,6 +47,14 @@ export const UserProfileView: React.FC<UserProfileViewProps> = ({
   const [editBio, setEditBio] = useState(user?.bio || '');
   const [editAvatar, setEditAvatar] = useState(user?.avatarUrl || '');
 
+  React.useEffect(() => {
+    if (user) {
+      setEditName(user.displayName || '');
+      setEditBio(user.bio || '');
+      setEditAvatar(user.avatarUrl || '');
+    }
+  }, [user]);
+
   const isMe = user?.id === currentUser?.id;
   const isFollowing = (currentUser?.following || []).includes(user?.id || '');
   const isFriend = (currentUser?.friends || []).includes(user?.id || '');

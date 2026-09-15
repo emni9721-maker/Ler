@@ -1139,36 +1139,59 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
           />
         </div>
 
-        {/* Android App & APK Section */}
+        {/* Native Android App & Kotlin SDK Section */}
         <div className="space-y-2">
-          <h3 className="text-xs uppercase tracking-wider text-neutral-400 font-bold px-1">
-            Android App & Installation
-          </h3>
-          <div className="rounded-3xl bg-gradient-to-r from-emerald-950/40 via-neutral-900/60 to-cyan-950/40 border border-emerald-500/30 p-4">
-            <div className="flex items-center justify-between gap-3">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-emerald-500 to-cyan-500 flex items-center justify-center text-neutral-950 shadow-lg shadow-emerald-500/20 shrink-0">
+          <div className="flex items-center justify-between px-1">
+            <h3 className="text-xs uppercase tracking-wider text-neutral-400 font-bold flex items-center gap-1.5">
+              <Smartphone className="w-3.5 h-3.5 text-emerald-400" />
+              <span>Native Android App (Kotlin & Android SDK)</span>
+            </h3>
+            <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold">
+              Jetpack Compose • SDK 35
+            </span>
+          </div>
+
+          <div className="rounded-3xl bg-gradient-to-br from-emerald-950/40 via-neutral-900/60 to-cyan-950/40 border border-emerald-500/30 p-4 space-y-3">
+            <div className="flex items-start justify-between gap-3">
+              <div className="flex items-start gap-3">
+                <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-emerald-500 to-cyan-500 flex items-center justify-center text-neutral-950 shadow-lg shadow-emerald-500/20 shrink-0 font-bold">
                   <Smartphone className="w-5 h-5" />
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-white flex items-center gap-2">
-                    ZERO for Android
+                    ZERO Native Android App
                     <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-                      APK v1.0
+                      Kotlin 2.0
                     </span>
                   </h4>
-                  <p className="text-[11px] text-neutral-400 mt-0.5">
-                    Install direct WebAPK or download the standalone ZERO-v1.0.apk package
+                  <p className="text-[11px] text-neutral-300 mt-0.5">
+                    Pure native Android Studio project with Jetpack Compose, Android Keystore AES-256 GCM, BiometricPrompt, and Media3 ExoPlayer.
                   </p>
+                  <div className="flex flex-wrap gap-2 mt-2 text-[10px] text-neutral-400 font-mono">
+                    <span className="bg-neutral-900/80 px-2 py-0.5 rounded border border-neutral-800">app.zero.vault</span>
+                    <span className="bg-neutral-900/80 px-2 py-0.5 rounded border border-neutral-800">API 35 (Android 15)</span>
+                    <span className="bg-neutral-900/80 px-2 py-0.5 rounded border border-neutral-800">Gradle Kotlin DSL</span>
+                  </div>
                 </div>
               </div>
+            </div>
+
+            <div className="flex items-center gap-2 pt-1">
               <button
                 onClick={onOpenApkModal}
-                className="px-3.5 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-neutral-950 font-bold text-xs flex items-center gap-1.5 shadow-lg shadow-emerald-500/20 transition-all shrink-0 cursor-pointer"
+                className="flex-1 py-2 px-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-neutral-950 font-bold text-xs flex items-center justify-center gap-1.5 shadow-lg shadow-emerald-500/20 transition-all cursor-pointer"
+              >
+                <Smartphone className="w-3.5 h-3.5" />
+                <span>Open Kotlin Studio Hub</span>
+              </button>
+              <a
+                href="/api/download/android-project"
+                download="ZERO-Android-Project.zip"
+                className="py-2 px-3 rounded-xl bg-neutral-800 hover:bg-neutral-700 text-neutral-200 font-semibold text-xs flex items-center gap-1.5 transition-colors cursor-pointer"
               >
                 <Download className="w-3.5 h-3.5" />
-                <span>Get APK</span>
-              </button>
+                <span>Download Project (.zip)</span>
+              </a>
             </div>
           </div>
         </div>

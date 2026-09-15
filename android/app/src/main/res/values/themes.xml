@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.ZERO" parent="android:Theme.Material.NoActionBar">
+        <item name="android:statusBarColor">@color/zero_dark_background</item>
+        <item name="android:navigationBarColor">@color/zero_dark_background</item>
+        <item name="android:windowBackground">@color/zero_dark_background</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+</resources>

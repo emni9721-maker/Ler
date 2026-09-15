@@ -57,6 +57,12 @@ export const MessengerModal: React.FC<MessengerModalProps> = ({
   getThreadMessages,
 }) => {
   const [activeUserId, setActiveUserId] = useState<string | null>(initialTargetUserId || null);
+
+  useEffect(() => {
+    if (initialTargetUserId) {
+      setActiveUserId(initialTargetUserId);
+    }
+  }, [initialTargetUserId]);
   const [messageText, setMessageText] = useState('');
   const [showAttachMenu, setShowAttachMenu] = useState(false);
   const [showVaultPicker, setShowVaultPicker] = useState(false);

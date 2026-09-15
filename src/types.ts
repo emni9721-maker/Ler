@@ -110,6 +110,25 @@ export interface Post {
   savedBy: string[]; // user IDs who saved
 }
 
+export interface ReelItem {
+  id: string;
+  userId: string;
+  user: UserPreview;
+  videoUrl: string;
+  thumbnailUrl?: string;
+  caption: string;
+  audioTrack: string;
+  likesCount: number;
+  commentsCount: number;
+  sharesCount: number;
+  isLiked?: boolean;
+  isSaved?: boolean;
+  tags?: string[];
+  location?: string;
+  createdAt: string;
+  comments?: Comment[];
+}
+
 export interface Story {
   id: string;
   userId: string;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, MessageSquare, Cloud, HardDrive, Settings } from 'lucide-react';
+import { Search, MessageSquare, Cloud, HardDrive, Settings, Bell } from 'lucide-react';
 import { User, AppTheme } from '../types';
 import { ThemeToggler } from './ThemeToggler';
 
@@ -12,8 +12,10 @@ interface TopAppBarProps {
   onOpenMessenger: () => void;
   onOpenSettings: () => void;
   onOpenProfile?: () => void;
+  onOpenNotifications?: () => void;
   onOpenApkModal?: () => void;
   unreadMessagesCount?: number;
+  unreadNotificationsCount?: number;
 }
 
 export const TopAppBar: React.FC<TopAppBarProps> = ({
@@ -25,7 +27,9 @@ export const TopAppBar: React.FC<TopAppBarProps> = ({
   onOpenMessenger,
   onOpenSettings,
   onOpenProfile,
+  onOpenNotifications,
   unreadMessagesCount = 1,
+  unreadNotificationsCount = 0,
 }) => {
   const activeUser = user || currentUser;
   const [showStorageTooltip, setShowStorageTooltip] = useState(false);
@@ -119,6 +123,21 @@ export const TopAppBar: React.FC<TopAppBarProps> = ({
         >
           <Search className="w-5 h-5" />
         </button>
+
+        {/* Activity / Notifications */}
+        {onOpenNotifications && (
+          <button
+            id="top-notifications-btn"
+            onClick={onOpenNotifications}
+            className="p-2 rounded-full text-neutral-400 hover:text-white hover:bg-neutral-800/60 transition-colors relative cursor-pointer"
+            title="Activity & Notifications"
+          >
+            <Bell className="w-5 h-5" />
+            {unreadNotificationsCount > 0 && (
+              <span className="absolute top-1 right-1 w-2.5 h-2.5 rounded-full bg-emerald-400 border-2 border-[#0c0e12]" />
+            )}
+          </button>
+        )}
 
         {/* Messenger */}
         <button

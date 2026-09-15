@@ -3,7 +3,6 @@ import react from '@vitejs/plugin-react';
 import fs from 'fs';
 import path from 'path';
 import {defineConfig, Plugin} from 'vite';
-import { VitePWA } from 'vite-plugin-pwa';
 
 // LINT.IfChange(aistudio_media_plugin)
 function aistudioMediaPlugin(): Plugin {
@@ -71,45 +70,6 @@ export default defineConfig(() => {
       react(),
       tailwindcss(),
       aistudioMediaPlugin(),
-      VitePWA({
-        registerType: 'autoUpdate',
-        includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'icon.svg'],
-        manifest: {
-          id: '/',
-          name: 'ZERO: Encrypted Cloud Vault',
-          short_name: 'ZERO',
-          description: 'Android-inspired encrypted social cloud vault for photos, 4K videos, documents, and messaging.',
-          theme_color: '#0c0e12',
-          background_color: '#0c0e12',
-          display: 'standalone',
-          orientation: 'portrait',
-          start_url: '/',
-          scope: '/',
-          icons: [
-            {
-              src: '/pwa-192x192.png',
-              sizes: '192x192',
-              type: 'image/png',
-              purpose: 'any',
-            },
-            {
-              src: '/pwa-512x512.png',
-              sizes: '512x512',
-              type: 'image/png',
-              purpose: 'any',
-            },
-            {
-              src: '/pwa-maskable-512x512.png',
-              sizes: '512x512',
-              type: 'image/png',
-              purpose: 'maskable',
-            },
-          ],
-        },
-        workbox: {
-          globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2}'],
-        },
-      }),
     ],
     resolve: {
       alias: {
